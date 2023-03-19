@@ -24,11 +24,12 @@
         <h2>여기로 오세용~</h2>
         <p>장소: 서울 강동구 천호대로 1077 이스트센트럴타워 35층</p>
         <div id="map"></div>
-        <script src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId={riqsv7nxip}&submodules=geocoder"></script>
+        <script type="text/javascript"
+            src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=riqsv7nxip"></script>
         <script>
             var mapOptions = {
                 center: new naver.maps.LatLng(37.539963, 127.135514),
-                zoom: 16
+                zoom: 15
             };
 
             var map = new naver.maps.Map('map', mapOptions);
