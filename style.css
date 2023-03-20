@@ -35,6 +35,10 @@ body {
     text-align: left;
 }
 
+ul,ol,li {
+    list-style: none;
+}
+
 .section img {
     display: block;
     margin: 20px auto;
@@ -67,6 +71,22 @@ body {
 .gallery-item img {
     max-width: 100%;
     height: auto;
+}
+
+.btn_normal {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    color: #FFF;
+    background-color: #da918a;
+    border: 1px solid #da918a;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 40px 0 40px;
+    border-radius: 4px;
+    display: inline-block;
+    font-family: 'Roboto-Medium', sans-serif;
+    letter-spacing: 0.04em;
 }
 
 /* 공통 스타일 */
