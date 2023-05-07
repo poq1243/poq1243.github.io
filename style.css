@@ -5,22 +5,67 @@ body {
 }
 
 .header {
-    background-color: #f5e3c7;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
 }
 
+/* 슬라이드 컨테이너 */
+.slideshow-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* -ms-overflow-style: none; */
+}
+
+.slideshow-container::-webkit-scrollbar {
+    /* width: 50%;
+    height: 8px; */
+    display: none;
+}
+/* .slideshow-container::-webkit-scrollbar-thumb {
+    background-color: #FF6666;
+    border-radius: 10px;
+}
+.slideshow-container::-webkit-scrollbar-track {
+    background-color: #cccccc;
+} */
+
+
+/* 이미지 포함 슬라이드 */
+.image-slide {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
 .bottom {
-    background-color: #f5e3c7;
+    /* display: "flex"; */
+    background-color: #ffffff;
     padding: 30px;
     text-align: center;
+    /* justify-content: space-around; */
     position: fixed;
     bottom: 0px;
-    /* position: relative; */
-    /* bottom: 0; */
     width: 100%;
     height: 30px;
-    opacity: 80%;
+    opacity: 100%;
+    /* margin: 0 auto; */
+    /* clear: both; */
+    /* z-index: 9999; */
+}
+
+.bottom_blank {
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    bottom: 0px;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    opacity: 100%;
     /* margin: 0 auto; */
     /* clear: both; */
     /* z-index: 9999; */
@@ -51,9 +96,11 @@ body {
     text-align: left;
 }
 
-ul,ol,li {
+/* ul,
+ol,
+li {
     list-style: none;
-}
+} */
 
 .section img {
     display: block;
@@ -111,7 +158,7 @@ ul,ol,li {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: #ffffff;
+    color: gray;
     border-radius: 5px;
     transition: background-color 0.2s ease-in-out;
 }

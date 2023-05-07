@@ -9,23 +9,20 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>혜진 ♡ 재준 청첩장</h1>
-        <p> 혜진이와 재준이의 결혼식에 초대합니다. </p>
-
-        <!-- 버튼 -->
-        <!-- <a href="index.html" class="floating-button">홈</a>
-        <a href="gallery.html" class="button">사진첩</a>
-        <a href="visitor.html" class="button">방명록</a>
-        <a href="gift.html" class="button">마음전하기</a>
-        <a href="map.html" class="button">오시는길</a> -->
-    </div>
     <section class="section">
-        <h2>자세한 정보</h2>
-        <p>일시: 2023년 2월 17일 오후 3시 30분</p>
-        <p>장소: 서울 강동구 천호대로 1077 이스트센트럴타워 35층 (강동 루벨)</p>
-        <img src="https://via.placeholder.com/300x200" alt="청첩장 이미지">
-        <div id="map" style="width:100%;height:400px;"></div>
+        <div class="slideshow-container">
+            <img class="image-slide" alt="Gallery Pic 1" src="img/gallery_pic1.jpg">
+            <img class="image-slide" alt="Gallery Pic 2" src="img/gallery_pic2.jpg">
+            <img class="image-slide" alt="Gallery Pic 3" src="img/gallery_pic3.jpg">
+            <img class="image-slide" alt="Gallery Pic 4" src="img/gallery_pic4.jpg">
+        </div>
+    </section>
+
+    <section class="section">
+        <p><b>2월 17일 토요일,</b>
+            <br> <b>루벨 강동점</b>에서 만나요!
+        </p>
+        <div id="map" style="width:100%;height:400px;margin: 0 auto;"></div>
         <script type="text/javascript"
             src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=riqsv7nxip"></script>
         <script>
@@ -48,40 +45,59 @@
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3163.883603920758!2d127.03816842288857!3d37.50204221931369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e65bb10a1f%3A0x4f8bb57dbbd96b56!2z7J207J6k7J6l7ZWZ6rWQIOyEnOygnOydtOyynOq1rCDshJzshJzsoJXsiKXrsJTsgrzsi5zsmrDsm5DsoIjshJzsmIHshJzsgpjsiJXthLjslrQg67Ck7J6Q6rSA7J2YIC0z!5e0!3m2!1sko!2skr!4v1646077968701!5m2!1sko!2skr"
                 width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div> -->
+        <ul style="list-style-type:disc; text-align:left">
+            <li>날짜: 2024. 02. 17</li>
+            <li>시간: 오후 3시 30분</li>
+            <li>위치: 서울 강동구 천호대로 1077 이스트센트럴타워 35층</li>
+        </ul>
     </section>
-    <section class="section">
-        <h2>사진첩</h2>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="사진1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="사진2">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="사진3">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="사진4">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="사진5">
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200" alt="사진6">
-            </div>
-        </div>
-    </section>
+    <div class="bottom_blank"></div>
 
     <div class="bottom">
 
         <!-- 버튼 -->
-        <a href="index.html" class="button">홈</a>
+        <a href="map.html" class="button">우리소개</a>
         <a href="gallery.html" class="button">사진첩</a>
-        <a href="visitor.html" class="button">방명록</a>
+        <a href="index.html" class="button">홈</a>
         <a href="gift.html" class="button">마음전하기</a>
-        <a href="map.html" class="button">오시는길</a>
+        <a href="visitor.html" class="button">방명록</a>
     </div>
+
+
+    <script>
+        let container = document.querySelector('.slideshow-container');
+        let images = document.querySelectorAll('.image-slide');
+
+        let previousXPosition = container.scrollLeft;
+
+        container.addEventListener('scroll', function (e) {
+            let currentXPosition = container.scrollLeft;
+
+            if (currentXPosition > previousXPosition) {
+                // User swiped left
+                for (let i = 0; i < images.length; i++) {
+                    let image = images[i];
+                    let imageRight = image.offsetLeft + image.offsetWidth;
+                    if (imageRight > currentXPosition && imageRight <= currentXPosition + window.innerWidth / 2) {
+                        container.scrollLeft = imageRight;
+                        break;
+                    }
+                }
+            } else if (currentXPosition < previousXPosition) {
+                // User swiped right
+                for (let i = images.length - 1; i >= 0; i--) {
+                    let image = images[i];
+                    let imageLeft = image.offsetLeft;
+                    if (imageLeft < currentXPosition && imageLeft >= currentXPosition - window.innerWidth / 2) {
+                        container.scrollLeft = imageLeft;
+                        break;
+                    }
+                }
+            }
+
+            previousXPosition = currentXPosition;
+        });
+    </script>
 </body>
 
 </html>
