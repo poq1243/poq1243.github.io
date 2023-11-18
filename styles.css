@@ -1,0 +1,154 @@
+/* 기본 폰트와 색상 설정 */
+body {
+    font-family: '나눔고딕', sans-serif;
+    color: #444;
+    margin: 0;
+    /* body와 html 태그의 기본 마진을 제거합니다. */
+    padding: 0;
+    /* body와 html 태그의 기본 패딩을 제거합니다. */
+    width: 100%;
+    /* 너비를 100%로 설정하여 화면에 꽉 차게 합니다. */
+    padding-bottom: 70px;
+        /* 기본 하단 여백 */
+}
+
+/* 헤더 스타일링 */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 58px;
+    /* pt 대신 px 사용 */
+    width: 100%;
+    /* 헤더는 보통 전체 너비를 차지합니다 */
+}
+
+/* 사이드바와 사진 컨테이너를 Flexbox를 사용하도록 변경 */
+.main-content {
+    display: flex;
+    /* 새로 추가된 클래스 */
+    flex-wrap: wrap;
+    /* 화면 크기에 따라 아이템을 줄바꿈 */
+}
+
+.sidebar {
+    flex: 1;
+            /* 유연한 사이즈 조정 */
+    height: auto;
+            /* 높이를 auto로 설정하여 콘텐츠에 맞게 조정 */
+    /* width: 20%;
+    height: 500pt;
+    float: left; */
+}
+
+/* 결혼 사진 섹션 */
+.photo-container {
+    /* width: 80%;
+    height: 500pt;*/
+    float: right; 
+    flex: 3;
+        /* 유연한 사이즈 조정 */
+    height: auto;
+        /* 높이를 auto로 설정하여 콘텐츠에 맞게 조정 */
+}
+
+.couple-photo {
+    display: flex;
+    /* 플렉스 컨테이너로 설정합니다. */
+    justify-content: flex-end;
+    /* 자식 요소들을 컨테이너의 끝(우측)으로 정렬합니다. */
+    align-items: center; /* 이미지를 세로 중앙에 정렬합니다. */
+}
+
+.couple-photo img {
+    max-width: 80%;
+    /* 이미지가 부모 요소의 100% 너비를 넘지 않도록 합니다. */
+    height: auto;
+    /* 너비에 따라 높이가 자동으로 조정되도록 합니다. */
+    margin: 4.5vw auto;
+    /* 상하 여백을 화면 너비의 백분율로 설정합니다. */
+    display: block;
+    /* 이미지가 블록 레벨 요소처럼 행동하게 합니다. */
+    object-fit: cover;
+    /* 이미지가 컨테이너를 가득 채우도록 합니다. */
+}
+
+/* 결혼 날짜 섹션 */
+.wedding-date {
+    font-family: 'Bodoni 72', 'Book Italic', serif;
+    /* 대체 폰트도 함께 명시합니다. */
+    font-size: 2.3em;
+    /* 웹에서는 px 단위를 사용하는 것이 좋습니다. */
+    font-style: italic;
+    /* 이탤릭체를 적용합니다. */
+    color: #6F6F6F;
+    /* 회색을 나타내는 일반적인 Hex 코드입니다. */
+    text-align: right;
+    /* 텍스트를 오른쪽에 정렬합니다. */
+    width: 1.15em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 20px;
+        /* 텍스트와 테두리 사이의 공간을 추가 */
+}
+
+/* 인용문 섹션 */
+#wedding-quote {
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    width: 100%;
+    /* 너비를 100%로 설정합니다. */
+    padding: 0;
+    /* 상하 패딩을 설정합니다. */
+    box-shadow: 0 1pt 3pt rgba(0, 0, 0, 0.2);
+    /* 그림자 추가 */
+    position: fixed;
+    /* 네비게이션 바를 고정시킵니다. */
+    bottom: 0;
+    /* 화면 하단에 위치시킵니다. */
+    left: 0;
+    /* 좌측 경계부터 시작합니다. */
+    height: 70pt;
+
+}
+
+.nav-button {
+    display: block;
+    border: none;
+    /* 버튼 테두리 제거 */
+    background: none;
+    /* 버튼 배경 제거 */
+    padding: 0px;
+    /* 버튼 내부 패딩 */
+    margin: 0;
+}
+
+.nav-button img {
+    width: 100%;
+    /* 이미지 크기 조정 */
+    height: auto;
+    /* 이미지 높이를 비율에 맞게 자동 조정 */
+}
+
+/* 반응형 디자인: 태블릿과 모바일 사이즈 */
+@media (max-width: 768px) {
+    .couple-photo img {
+        margin: 4vw auto;
+        /* 더 작은 화면에서는 여백을 줄입니다. */
+    }
+}
+
+@media (max-width: 480px) {
+    .couple-photo img {
+        margin: 3vw auto;
+        /* 모바일 화면에서는 여백을 더 줄입니다. */
+    }
+}

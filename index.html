@@ -1,105 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일 청첩장</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <section class="section">
-        <div class="slideshow-container">
-            <img class="image-slide" alt="Gallery Pic 1" src="./img/gallery_pic1.jpg">
-            <img class="image-slide" alt="Gallery Pic 2" src="./img/gallery_pic2.jpg">
-            <img class="image-slide" alt="Gallery Pic 3" src="./img/gallery_pic3.jpg">
-            <img class="image-slide" alt="Gallery Pic 4" src="./img/gallery_pic4.jpg">
-            <img class="image-slide" alt="Gallery Pic 5" src="./img/gallery_pic5.jpg">
+    <header></header>
+
+    <main class="main-content">
+        <div class="sidebar">
+            <section class="wedding-date">
+                <time datetime="2023-02-17">02 / 17</time>
+            </section>
         </div>
-    </section>
+        <div class="photo-container">
 
-    <section class="section" style="background-color:#dadada3a;">
-        <p><b>2월 17일 토요일,</b>
-            <br> <b>루벨 강동점</b>에서 만나요!
-        </p>
-        <div id="map" style="width:100%;height:400px;margin: 0 auto;"></div>
-        <script type="text/javascript"
-            src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=riqsv7nxip"></script>
-        <script>
-            var mapOptions = {
-                center: new naver.maps.LatLng(37.5362, 127.1323),
-                zoom: 16
-            };
+            <section class="couple-photo">
+                <img src="01_메인화면/01.png" alt="결혼하는 커플 사진">
+            </section>
+        </div>
+    </main>
 
-            var map = new naver.maps.Map('map', mapOptions);
-
-            var marker = new naver.maps.Marker({
-                position: new naver.maps.LatLng(37.5362, 127.1323),
-                map: map
-            });
+    
+    <img id='wedding-quote' src="01_메인화면/bottom.png" alt="청첩장 문구">
 
 
-        </script>
-        <!-- <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3163.883603920758!2d127.03816842288857!3d37.50204221931369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e65bb10a1f%3A0x4f8bb57dbbd96b56!2z7J207J6k7J6l7ZWZ6rWQIOyEnOygnOydtOyynOq1rCDshJzshJzsoJXsiKXrsJTsgrzsi5zsmrDsm5DsoIjshJzsmIHshJzsgpjsiJXthLjslrQg67Ck7J6Q6rSA7J2YIC0z!5e0!3m2!1sko!2skr!4v1646077968701!5m2!1sko!2skr"
-                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div> -->
-        <ul style="list-style-type:disc; text-align:left;color: #4b4b4b;padding-left:5%;">
-            <li>날짜: 2024. 02. 17</li>
-            <li>시간: 오후 3시 30분</li>
-            <li>위치: 서울 강동구 천호대로 1077 이스트센트럴타워 35층</li>
-        </ul>
-    </section>
-    <div class="bottom_blank"></div>
-
-    <div class="bottom">
-
-        <!-- 버튼 -->
-        <a href="map.html" class="button">우리소개</a>
-        <a href="gallery.html" class="button">사진첩</a>
-        <a href="index.html" class="button">홈</a>
-        <a href="gift.html" class="button">마음전하기</a>
-        <a href="visitor.html" class="button">방명록</a>
-    </div>
-
-
-    <script>
-        let container = document.querySelector('.slideshow-container');
-        let images = document.querySelectorAll('.image-slide');
-
-        let previousXPosition = container.scrollLeft;
-
-        container.addEventListener('scroll', function (e) {
-            let currentXPosition = container.scrollLeft;
-
-            if (currentXPosition > previousXPosition) {
-                // User swiped left
-                for (let i = 0; i < images.length; i++) {
-                    let image = images[i];
-                    let imageRight = image.offsetLeft + image.offsetWidth;
-                    if (imageRight > currentXPosition && imageRight <= currentXPosition + window.innerWidth / 2) {
-                        container.scrollLeft = imageRight;
-                        break;
-                    }
-                }
-            } else if (currentXPosition < previousXPosition) {
-                // User swiped right
-                for (let i = images.length - 1; i >= 0; i--) {
-                    let image = images[i];
-                    let imageLeft = image.offsetLeft;
-                    if (imageLeft < currentXPosition && imageLeft >= currentXPosition - window.innerWidth / 2) {
-                        container.scrollLeft = imageLeft;
-                        break;
-                    }
-                }
-            }
-            
-
-            previousXPosition = currentXPosition;
-        });
-    </script>
+    <footer>
+        <nav class="navigation-bar">
+            <a href="#home" class="nav-button">
+                <img src="00_공통/홈.png" alt="홈">
+            </a>
+            <a href="#about" class="nav-button">
+                <img src="00_공통/위치 및 시간.png" alt="위치 및 시간">
+            </a>
+            <a href="#contact" class="nav-button">
+                <img src="00_공통/마음 전할 곳.png" alt="마음 전할 곳">
+            </a>
+            <a href="#us" class="nav-button">
+                <img src="00_공통/우리.png" alt="우리">
+            </a>
+            <!-- 더 많은 버튼이 필요하다면 위와 같이 추가 -->
+        </nav>
+    </footer>
 </body>
 
 </html>
