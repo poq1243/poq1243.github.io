@@ -70,14 +70,14 @@ header {
 .wedding-date {
     font-family: 'Bodoni 72', 'Book Italic', serif;
     /* 대체 폰트도 함께 명시합니다. */
-    font-size: 2.3em;
+    font-size: 6.5vw;
     font-style: italic;
     /* 이탤릭체를 적용합니다. */
     color: #6F6F6F;
     /* 회색을 나타내는 일반적인 Hex 코드입니다. */
     text-align: right;
     /* 텍스트를 오른쪽에 정렬합니다. */
-    width: 1.15em;
+    width: 3.25vw;
     position: absolute;
     bottom: 0;
     left: 8.4vw;
