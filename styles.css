@@ -8,7 +8,7 @@ body {
     /* body와 html 태그의 기본 패딩을 제거합니다. */
     width: 100%;
     /* 너비를 100%로 설정하여 화면에 꽉 차게 합니다. */
-    padding-bottom: 70px;
+    padding-bottom: 7.8vh;
         /* 기본 하단 여백 */
 }
 
@@ -27,28 +27,18 @@ header {
 .main-content {
     display: flex;
     /* 새로 추가된 클래스 */
-    flex-wrap: wrap;
-    /* 화면 크기에 따라 아이템을 줄바꿈 */
     position: relative;
 }
 
 .sidebar {
-    flex: 1;
-            /* 유연한 사이즈 조정 */
-    height: auto;
-            /* 높이를 auto로 설정하여 콘텐츠에 맞게 조정 */
-    /* width: 20%;
-    height: 500pt;
-    float: left; */
+    width: 21vw;
 }
 
 /* 결혼 사진 섹션 */
 .photo-container {
-    width: 78.9%;
+    width: 79vw;
     /* height: 500pt;*/ 
     float: right; 
-    /* flex: 3; */
-        /* 유연한 사이즈 조정 */
     height: auto;
         /* 높이를 auto로 설정하여 콘텐츠에 맞게 조정 */   
 }
@@ -67,7 +57,7 @@ header {
     /* 이미지가 부모 요소의 100% 너비를 넘지 않도록 합니다. */
     height: auto;
     /* 너비에 따라 높이가 자동으로 조정되도록 합니다. */
-    margin: 4.5vw auto;
+    margin: 0.75vw 0;
     /* 상하 여백을 화면 너비의 백분율로 설정합니다. */
     display: block;
     /* 이미지가 블록 레벨 요소처럼 행동하게 합니다. */
@@ -81,7 +71,6 @@ header {
     font-family: 'Bodoni 72', 'Book Italic', serif;
     /* 대체 폰트도 함께 명시합니다. */
     font-size: 2.3em;
-    /* 웹에서는 px 단위를 사용하는 것이 좋습니다. */
     font-style: italic;
     /* 이탤릭체를 적용합니다. */
     color: #6F6F6F;
@@ -91,12 +80,13 @@ header {
     width: 1.15em;
     position: absolute;
     bottom: 0;
-    left: 8%;
+    left: 8.4vw;
     
 }
 
 /* 인용문 섹션 */
 #wedding-quote {
+    margin-top: 3.44vh;
     width: 100%;
     height: auto;
     align-items: center;
@@ -106,7 +96,7 @@ header {
     display: flex;
     justify-content: space-around;
     background-color: white;
-    width: 100%;
+    width: 100vw;
     /* 너비를 100%로 설정합니다. */
     padding: 0;
     /* 상하 패딩을 설정합니다. */
@@ -118,7 +108,7 @@ header {
     /* 화면 하단에 위치시킵니다. */
     left: 0;
     /* 좌측 경계부터 시작합니다. */
-    height: 70pt;
+    height: 7.8vh;
 
 }
 
@@ -134,23 +124,8 @@ header {
 }
 
 .nav-button img {
-    width: 100%;
+    width: auto;
     /* 이미지 크기 조정 */
-    height: auto;
+    height: 7.8vh;
     /* 이미지 높이를 비율에 맞게 자동 조정 */
-}
-
-/* 반응형 디자인: 태블릿과 모바일 사이즈 */
-@media (max-width: 768px) {
-    .couple-photo img {
-        margin: 4vw auto;
-        /* 더 작은 화면에서는 여백을 줄입니다. */
-    }
-}
-
-@media (max-width: 480px) {
-    .couple-photo img {
-        margin: 3vw auto;
-        /* 모바일 화면에서는 여백을 더 줄입니다. */
-    }
 }
