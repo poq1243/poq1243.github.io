@@ -1,0 +1,13 @@
+/* 기본 폰트와 색상 설정 */
+body {
+    font-family: '나눔고딕', sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    /* body와 html 태그의 기본 마진을 제거합니다. */
+    padding: 0;
+    /* body와 html 태그의 기본 패딩을 제거합니다. */
+    width: 100%;
+    /* 너비를 100%로 설정하여 화면에 꽉 차게 합니다. */
+    padding-bottom: 7.8vh;
+    /* 기본 하단 여백 */
+}
