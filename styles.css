@@ -23,6 +23,40 @@ header {
     /* 헤더는 보통 전체 너비를 차지합니다 */
 }
 
+.swiper {
+    display: flex;
+        /* 플렉스 컨테이너로 설정합니다. */
+    justify-content: flex-end;
+        /* 자식 요소들을 컨테이너의 끝(우측)으로 정렬합니다. */
+    align-items: flex-end;
+        /* 이미지를 세로 중앙에 정렬합니다. */
+}
+
+.swiper .swiper-pagination-bullet {
+    background-color: #ffffff;
+    width: 2vw;
+    height: 2vw;
+}
+
+.swiper .swiper-pagination-bullets {
+    width: initial;
+    left: initial;
+    right: 1.75vw;
+}
+
+.swiper-slide img{
+    max-width: 100%;
+        /* 이미지가 부모 요소의 100% 너비를 넘지 않도록 합니다. */
+        height: auto;
+        /* 너비에 따라 높이가 자동으로 조정되도록 합니다. */
+        margin: 0.75vw 0;
+        /* 상하 여백을 화면 너비의 백분율로 설정합니다. */
+        display: block;
+        /* 이미지가 블록 레벨 요소처럼 행동하게 합니다. */
+        object-fit: cover;
+        /* 이미지가 컨테이너를 가득 채우도록 합니다. */
+}
+
 /* 사이드바와 사진 컨테이너를 Flexbox를 사용하도록 변경 */
 .main-content {
     display: flex;
@@ -43,28 +77,6 @@ header {
         /* 높이를 auto로 설정하여 콘텐츠에 맞게 조정 */   
 }
 
-.couple-photo {
-    display: flex;
-    /* 플렉스 컨테이너로 설정합니다. */
-    justify-content: flex-end;
-    /* 자식 요소들을 컨테이너의 끝(우측)으로 정렬합니다. */
-    align-items: flex-end; /* 이미지를 세로 중앙에 정렬합니다. */
-    
-}
-
-.couple-photo img {
-    max-width: 100%;
-    /* 이미지가 부모 요소의 100% 너비를 넘지 않도록 합니다. */
-    height: auto;
-    /* 너비에 따라 높이가 자동으로 조정되도록 합니다. */
-    margin: 0.75vw 0;
-    /* 상하 여백을 화면 너비의 백분율로 설정합니다. */
-    display: block;
-    /* 이미지가 블록 레벨 요소처럼 행동하게 합니다. */
-    object-fit: cover;
-    /* 이미지가 컨테이너를 가득 채우도록 합니다. */
-    
-}
 
 /* 결혼 날짜 섹션 */
 .wedding-date {

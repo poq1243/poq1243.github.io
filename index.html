@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일 청첩장</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
@@ -16,11 +19,31 @@
             </section>
         </div>
         <div class="photo-container">
-            <div class="couple-photo">
-                <img src="01_메인화면/01.png" alt="웨딩사진1">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="01_메인화면/01.png" alt="웨딩사진1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="01_메인화면/02.png" alt="웨딩사진2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="01_메인화면/03.png" alt="웨딩사진3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="01_메인화면/04.png" alt="웨딩사진4">
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
             </div>
+
         </div>
-        
+
     </main>
 
 
@@ -43,6 +66,19 @@
             <!-- 더 많은 버튼이 필요하다면 위와 같이 추가 -->
         </nav>
     </footer>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+        });
+    </script>
 </body>
 
 </html>
