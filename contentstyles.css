@@ -1,6 +1,6 @@
 /* 기본 폰트와 색상 설정 */
 body {
-    font-family: '나눔고딕', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     background-color: #F5F5F5;
     margin: 0;
     /* body와 html 태그의 기본 마진을 제거합니다. */
@@ -10,4 +10,65 @@ body {
     /* 너비를 100%로 설정하여 화면에 꽉 차게 합니다. */
     padding-bottom: 7.8vh;
     /* 기본 하단 여백 */
+}
+
+.title-container{
+    text-align: center;  
+    margin-top: 5.8vh;
+}
+
+h1 {
+    color: #222222;
+    font-weight: 400;
+    font-size: 6vw;
+    margin: 0;
+    padding: 0.43vh 0;
+}
+
+.button-container {
+    margin-top: 5.38vh;
+}
+
+.button-us {
+    padding: 1.4vw;
+}
+
+
+.photo-table {
+    display: flex;
+    width: 83.3vw;
+    margin: 0 8.35vw;
+    height: auto;
+    /* 높이를 auto로 설정하여 콘텐츠에 맞게 조정 */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.photo-card{
+    width: 40.5vw;
+    height: 56vw;
+    border: solid;
+    border-radius: 10%;
+    position: relative;
+    margin-top: 2.7vh;
+}
+
+.text-box{
+    position: absolute;
+    bottom: 4vw;
+    left: 4vw;
+}
+
+p1 {
+    font-size: 1.3vh;
+    margin: 0;
+    padding: 0;
+    border: solid;
+}
+p2 {
+    font-size: 1.6vh;
+    margin: 0;
+    padding: 0;
+    border: solid;
 }
