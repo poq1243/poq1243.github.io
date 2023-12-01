@@ -12,8 +12,8 @@ body {
     /* 기본 하단 여백 */
 }
 
-.title-container{
-    text-align: center;  
+.title-container {
+    text-align: center;
     margin-top: 5.8vh;
 }
 
@@ -30,7 +30,13 @@ h1 {
 }
 
 .button-us {
+    /* padding: 1.4vw;
+    height: auto; */
+}
+
+.button-us img {
     padding: 1.4vw;
+    width: 23.3vw;
 }
 
 
@@ -45,30 +51,78 @@ h1 {
     align-content: space-between;
 }
 
-.photo-card{
+.photo-card {
     width: 38.5vw;
     height: 51.3vw;
-    border: solid;
-    border-radius: 10%;
     position: relative;
     margin-top: 2.7vh;
 }
 
-.text-box{
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.text-box {
     position: absolute;
     bottom: 4vw;
     left: 4vw;
 }
 
-p1 {
+.text-box1 p {
     font-size: 1.3vh;
     margin: 0;
     padding: 0;
-    border: solid;
+    color: white;
 }
-p2 {
-    font-size: 1.6vh;
+
+.text-box2 p {
+    font-size: 1.7vh;
     margin: 0;
     padding: 0;
-    border: solid;
+    font-weight: 500;
+    color: white;
+}
+
+
+/* Photo Album Overlay styling */
+.photo-album-overlay {
+    position: fixed;
+    /* Fixed position to cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent background */
+    z-index: 1000;
+    /* Ensure it's above all other content */
+    display: flex;
+    /* Use flexbox to center the content */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+.photo-album {
+    text-align: center;
+    /* Center the photos within the album */
+}
+
+.photo-album img {
+    max-width: 90%;
+    /* Limit the photo size */
+    margin: 10px;
+    /* Spacing around photos */
+}
+
+/* Close button styling */
+.photo-album button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
 }

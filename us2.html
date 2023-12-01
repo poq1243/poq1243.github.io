@@ -15,38 +15,78 @@
     <main>
         <div class="title-container">
             <h1>우리🩵</h1>
-        
+
             <div class="button-container">
                 <a href="us.html" class="button-us">
-                    스토리 </a>
-            
+                    <img src="04_우리/아이콘/p2버튼_스토리.png" alt="스토리"> </a>
+
                 <a href="us2.html" class="button-us">
-                    사진첩 </a>
+                    <img src="04_우리/아이콘/p2버튼_사진첩.png" alt="사진첩"> </a>
             </div>
         </div>
-        
+
         <div class="photo-table">
-            <div class="photo-card">
+            <div class="photo-card" onclick="showPhotoAlbum()">
+                <img src="04_우리/사진첩/1/_MG_7641 복사.jpg" alt="1">
                 <div class="text-box">
-                    <p1>따뜻한 우리의 봄,</p1> <br>
-                    <p2>모교에서 추억하다.</p2>
+                    <div class="text-box1">
+                        <p>따뜻한 우리의 봄,</p>
+                    </div>
+                    <div class="text-box2">
+                        <p>모교에서 추억하다.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="photo-card">
                 <div class="text-box">
-                    <p1>따뜻한 우리의 봄,</p1> <br>
-                    <p2>모교에서 추억하다.</p2>
+                    <div class="text-box1">
+                        <p>따뜻한 우리의 봄,</p>
+                    </div>
+                    <div class="text-box2">
+                        <p>모교에서 추억하다.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="photo-card">
                 <div class="text-box">
-                    <p1>따뜻한 우리의 봄,</p1> <br>
-                    <p2>모교에서 추억하다.</p2>
+                    <div class="text-box1">
+                        <p>따뜻한 우리의 봄,</p>
+                    </div>
+                    <div class="text-box2">
+                        <p>모교에서 추억하다.</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- Photo Album Overlay (initially hidden) -->
+        <div class="photo-album-overlay" id="photoAlbumOverlay" style="display: none;">
+            <div class="photo-album">
+                <!-- Close button -->
+                <button onclick="closePhotoAlbum()">Close</button>
+
+                <!-- Photos in the album -->
+                <img src="04_우리/사진첩/1/_MG_7641 복사.jpg" alt="Wedding Photo 1">
+                <img src="04_우리/사진첩/1/_MG_7686 복사.jpg" alt="Wedding Photo 2">
+                <!-- Add more photos as needed -->
+            </div>
+        </div>
+
+
+
+        <!-- Script to handle the photo album overlay -->
+        <script>
+            function showPhotoAlbum() {
+                document.getElementById('photoAlbumOverlay').style.display = 'block';
+            }
+
+            function closePhotoAlbum() {
+                document.getElementById('photoAlbumOverlay').style.display = 'none';
+            }
+        </script>
 
     </main>
     <footer>
