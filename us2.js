@@ -4,7 +4,7 @@ function showPhotoAlbum(photoId) {
     const nameFile = [
         'photo1.png', 'photo2.png', 'photo3.png', 'photo4.png', 'photo5.png',
         'photo6.png', 'photo7.png', 'photo8.png', 'photo9.png', 'photo10.png'
-    ];png
+    ];
 
     var imgSrc = '04_우리/사진첩/'; // 여기에 기본 이미지 경로를 설정하세요.
     // photoId에 따라 imgSrc를 변경합니다.
