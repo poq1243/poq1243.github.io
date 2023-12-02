@@ -107,22 +107,32 @@ h1 {
     /* Center vertically */
 }
 
-.photo-album {
-    text-align: center;
-    /* Center the photos within the album */
+
+.swiper-slide img {
+    max-width: 100%;
+    /* 이미지가 부모 요소의 100% 너비를 넘지 않도록 합니다. */
+    height: auto;
+    /* 너비에 따라 높이가 자동으로 조정되도록 합니다. */
+    margin: 0.75vw 0;
+    /* 상하 여백을 화면 너비의 백분율로 설정합니다. */
+    display: block;
+    /* 이미지가 블록 레벨 요소처럼 행동하게 합니다. */
+    object-fit: cover;
+    /* 이미지가 컨테이너를 가득 채우도록 합니다. */
 }
 
-.photo-album img {
-    max-width: 90%;
-    /* Limit the photo size */
-    margin: 10px;
-    /* Spacing around photos */
-}
 
-/* Close button styling */
+
 .photo-album button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 10px;
+    /* padding: 1.4vw; */
+    margin: 0;
+    padding: 0;
+
+}
+
+.photo-album button img{
+    /* padding: 1.4vw; */
+    width: 23.3vw;
+    margin: 0;
+    padding: 0;
 }

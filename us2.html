@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일 청첩장</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -12,6 +14,7 @@
 </head>
 
 <body>
+    <script src="us2.js"></script>
     <main>
         <div class="title-container">
             <h1>우리🩵</h1>
@@ -26,8 +29,8 @@
         </div>
 
         <div class="photo-table">
-            <div class="photo-card" onclick="showPhotoAlbum()">
-                <img src="04_우리/사진첩/1/_MG_7641 복사.jpg" alt="1">
+            <div class="photo-card" onclick="showPhotoAlbum('photo1')">
+                <img src="04_우리/사진첩/1/photo1.png" alt="Album 1">
                 <div class="text-box">
                     <div class="text-box1">
                         <p>따뜻한 우리의 봄,</p>
@@ -38,7 +41,8 @@
                 </div>
             </div>
 
-            <div class="photo-card">
+            <div class="photo-card" onclick="showPhotoAlbum('photo2')">
+                <img src="04_우리/사진첩/2/photo1.png" alt="Album 2">
                 <div class="text-box">
                     <div class="text-box1">
                         <p>따뜻한 우리의 봄,</p>
@@ -49,7 +53,8 @@
                 </div>
             </div>
 
-            <div class="photo-card">
+            <div class="photo-card" onclick="showPhotoAlbum('photo3')">
+                <img src="04_우리/사진첩/3/photo1.png" alt="Album 3">
                 <div class="text-box">
                     <div class="text-box1">
                         <p>따뜻한 우리의 봄,</p>
@@ -64,29 +69,19 @@
 
         <!-- Photo Album Overlay (initially hidden) -->
         <div class="photo-album-overlay" id="photoAlbumOverlay" style="display: none;">
-            <div class="photo-album">
+            <div class="photo-album" id="photoAlbum">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper" id="swiperWrapper">
+                        <!-- Slides -->
+                    </div>
+                </div>
+
                 <!-- Close button -->
-                <button onclick="closePhotoAlbum()">Close</button>
-
-                <!-- Photos in the album -->
-                <img src="04_우리/사진첩/1/_MG_7641 복사.jpg" alt="Wedding Photo 1">
-                <img src="04_우리/사진첩/1/_MG_7686 복사.jpg" alt="Wedding Photo 2">
-                <!-- Add more photos as needed -->
+                <button onclick="closePhotoAlbum()">
+                    <img src="04_우리/아이콘/버튼_닫기.png" alt="닫기"></button>
             </div>
-        </div>
-
-
-
-        <!-- Script to handle the photo album overlay -->
-        <script>
-            function showPhotoAlbum() {
-                document.getElementById('photoAlbumOverlay').style.display = 'block';
-            }
-
-            function closePhotoAlbum() {
-                document.getElementById('photoAlbumOverlay').style.display = 'none';
-            }
-        </script>
 
     </main>
     <footer>
@@ -106,6 +101,15 @@
             <!-- 더 많은 버튼이 필요하다면 위와 같이 추가 -->
         </nav>
     </footer>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            slidesPerView: 2,
+            spaceBetween: 2,
+            centeredSlides: true,
+        });
+    </script>
 </body>
 
 </html>
