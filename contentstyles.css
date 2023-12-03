@@ -17,6 +17,11 @@ body {
     margin-top: 5.8vh;
 }
 
+.title-container p{
+    font-style: 'Noto Sans KR, Regular';
+    font-size: 3.256vw;
+}
+
 h1 {
     color: #222222;
     font-weight: 400;
@@ -120,10 +125,10 @@ h1 {
     border: solid;
     background-color: #F5F5F5;
     border-radius: 5% 5% 0 0;
-    width: 93.7vw;
-    height: 83.15vh;
-    margin-left: 3.15vw;
-    margin-top: 8.425vh;
+    width: 90vw;
+    height: 80vh;
+    margin-left: 5vw;
+    margin-top: 10vh;
     padding: 0;
     position: relative;
 }
@@ -134,8 +139,9 @@ h1 {
     padding: 0;
     position: absolute;
     bottom: 2.5vh;
-    left: 38.372vw;
+    left: 33.35vw;
     border: none;
+    background-color: #F5F5F5;
 
 }
 
@@ -155,9 +161,17 @@ h1 {
     padding: 0;
 }
 
+.text-container p {
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+}
+
 .text-container {
     font-style: 'Noto Sans KR, Regular';
     font-size: 3.2vw;
-    text-align: center;
-    width: 72vw;
+    text-align: left;
+    width: 78vw;
+    margin: 6vw;
 }
+
