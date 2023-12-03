@@ -5,12 +5,29 @@ function showPhotoAlbum(photoId) {
         'photo1.png', 'photo2.png', 'photo3.png', 'photo4.png', 'photo5.png',
         'photo6.png', 'photo7.png', 'photo8.png', 'photo9.png', 'photo10.png'
     ];
+    const subAlbum = [
+        '따스한 우리의 봄, 모교에서 추억하다.',
+        '따스한 우리의 봄, 모교에서 안뇽.',
+        '따스한 우리의 봄, 모교에서 오예.'
+    ];
+    const textAlbum = [
+        '신부 혜진이가 태어난 봄에, 우리의 추억이 묻어 있는 모교 한국항공대학교에서 첫 웨딩 사진을 촬영했습니다🩵',
+        '신부 혜진이가 태어난 봄에, 우리의 추억이 묻어 있는 봄이지롱롱🩵',
+        '신부 혜진이가 태어난 봄에, 우리의 추억이 묻어 있는 우야옹🩵'
+    ];
 
-    var imgSrc = '04_우리/사진첩/'; // 여기에 기본 이미지 경로를 설정하세요.
-    // photoId에 따라 imgSrc를 변경합니다.
     const slider = document.getElementById('swiperWrapper');
+    const subContainer = document.getElementById('subContainer');
+    const textContainer = document.getElementById('textContainer');
+    const p1 = document.createElement('p');
+    const p2 = document.createElement('p');
     switch (photoId) {
         case 'photo1':
+            p1.textContent = subAlbum[0];
+            subContainer.appendChild(p1);
+            p2.textContent = textAlbum[0];
+            textContainer.appendChild(p2);
+
             for (var i = 0; i < numFile[0]; i++) {
                 const slide = document.createElement('div');
                 slide.className = 'swiper-slide';
@@ -24,6 +41,11 @@ function showPhotoAlbum(photoId) {
             }
             break;
         case 'photo2':
+            p1.textContent = subAlbum[1];
+            subContainer.appendChild(p1);
+            p2.textContent = textAlbum[1];
+            textContainer.appendChild(p2);
+
             for (var i = 0; i < numFile[1]; i++) {
                 const slide = document.createElement('div');
                 slide.className = 'swiper-slide';
@@ -37,6 +59,11 @@ function showPhotoAlbum(photoId) {
             }
             break;
         case 'photo3':
+            p1.textContent = subAlbum[2];
+            subContainer.appendChild(p1);
+            p2.textContent = textAlbum[2];
+            textContainer.appendChild(p2);
+
             for (var i = 0; i < numFile[2]; i++) {
                 const slide = document.createElement('div');
                 slide.className = 'swiper-slide';
@@ -57,9 +84,14 @@ function showPhotoAlbum(photoId) {
 
 function closePhotoAlbum() {
     // 부모 노드 선택
-    const parent = document.getElementById('swiperWrapper');
+    const parentSwiper = document.getElementById('swiperWrapper');
+    const parentSubject = document.getElementById('subContainer');
+    const parenttext = document.getElementById('textContainer');
+    
     // 자식 노드 삭제
-    parent.innerHTML = "";
+    parentSwiper.innerHTML = "";
+    parentSubject.innerHTML = "";
+    parenttext.innerHTML = "";
 
     document.getElementById('photoAlbumOverlay').style.display = 'none';
     swiper.slideTo(0, 1, false)

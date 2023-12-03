@@ -116,18 +116,48 @@ h1 {
     /* 이미지가 컨테이너를 가득 채우도록 합니다. */
 }
 
-
+.photo-album-container {
+    border: solid;
+    background-color: #F5F5F5;
+    border-radius: 5% 5% 0 0;
+    width: 93.7vw;
+    height: 83.15vh;
+    margin-left: 3.15vw;
+    margin-top: 8.425vh;
+    padding: 0;
+    position: relative;
+}
 
 .photo-album button {
     /* padding: 1.4vw; */
     margin: 0;
     padding: 0;
+    position: absolute;
+    bottom: 2.5vh;
+    left: 38.372vw;
+    border: none;
 
 }
 
-.photo-album button img{
-    /* padding: 1.4vw; */
+.photo-album button img {
     width: 23.3vw;
+}
+
+.subject-container {
+    font-style: 'Noto Sans KR, Medium';
+    font-size: 3.7vw;
+    text-align: center;
+    margin: 2.69vh;
+}
+
+.subject-container p{
     margin: 0;
     padding: 0;
+}
+
+.text-container {
+    font-style: 'Noto Sans KR, Regular';
+    font-size: 3.2vw;
+    text-align: center;
+    width: 72vw;
 }
