@@ -125,11 +125,11 @@ h1 {
 .photo-album-container {
     border: solid;
     background-color: #F5F5F5;
-    border-radius: 5% 5% 0 0;
+    border-radius: 5vw 5vw 0 0;
     width: 90vw;
-    height: 80vh;
+    height: 88vh;
     margin-left: 5vw;
-    margin-top: 10vh;
+    margin-top: 5vh;
     padding: 0;
     position: relative;
 }
@@ -154,7 +154,7 @@ h1 {
     font-style: 'Noto Sans KR, Medium';
     font-size: 3.7vw;
     text-align: center;
-    margin: 2.69vh;
+    margin: 5.8vw;
 }
 
 .subject-container p{
@@ -173,6 +173,6 @@ h1 {
     font-size: 3.2vw;
     text-align: left;
     width: 78vw;
-    margin: 6vw;
+    margin: 5vw;
 }
 
