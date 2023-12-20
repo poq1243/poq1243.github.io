@@ -1,19 +1,24 @@
 function showPhotoAlbum(photoId) {
     // 각 폴더 파일 개수
-    const numFile = [3, 3, 2];
+    const numFile = [8, 2, 8, 5, 6];
     const nameFile = [
-        'photo1.png', 'photo2.png', 'photo3.png', 'photo4.png', 'photo5.png',
-        'photo6.png', 'photo7.png', 'photo8.png', 'photo9.png', 'photo10.png'
+        '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg',
+        '06.jpg', '07.jpg', '08.jpg', '09.jpg', '10.jpg'
     ];
     const subAlbum = [
-        '따스한 우리의 봄, 모교에서 추억하다.',
+        '따스한 우리의 봄, 모교에서 추억하다',
         '따스한 우리의 봄, 모교에서 안뇽.',
-        '따스한 우리의 봄, 모교에서 오예.'
+        '장거리 연애 시작, 우리의 첫 광주 봄나들이',
+        '푸릇푸릇 녹차밭에서, 덥지만 증거운 초여름',
+        '방방곡곡! 이번에는 부산 데이트'
+
     ];
     const textAlbum = [
         '신부 혜진이가 태어난 봄에, 우리의 추억이 묻어 있는 모교 한국항공대학교에서 첫 웨딩 사진을 촬영했습니다🩵',
         '신부 혜진이가 태어난 봄에, 우리의 추억이 묻어 있는 봄이지롱롱🩵',
-        '신부 혜진이가 태어난 봄에, 우리의 추억이 묻어 있는 우야옹🩵'
+        '장거리 연애가 시작되고 매주 광주-서울을 왔다갔다! 광주에서 첫 봄 나들이 피크닉을 했답니다🪴',
+        '여름 철새를 보기 위해 보성 녹차밭으로 달려갔어요. 너무 더워서 제대로 보진 못했지만 행복했던 하루였어요☀️',
+        '오빠네 동생 부부를 볼 겸 데이트 할 겸~ 여기저기 돌아다니며 추억을 쌓았어요🩵'
     ];
 
     const slider = document.getElementById('swiperWrapper');
@@ -33,7 +38,7 @@ function showPhotoAlbum(photoId) {
                 slide.className = 'swiper-slide';
 
                 const img = document.createElement('img');
-                img.src = '04_우리/사진첩/1/' + nameFile[i];
+                img.src = '04_우리/사진첩/01/' + nameFile[i];
                 img.alt = 'Wedding Photo'+i;  
 
                 slide.appendChild(img);
@@ -51,13 +56,14 @@ function showPhotoAlbum(photoId) {
                 slide.className = 'swiper-slide';
 
                 const img = document.createElement('img');
-                img.src = '04_우리/사진첩/2/' + nameFile[i];
+                img.src = '04_우리/사진첩/02/' + nameFile[i];
                 img.alt = 'Wedding Photo' + i;
 
                 slide.appendChild(img);
                 slider.appendChild(slide);
             }
             break;
+        
         case 'photo3':
             p1.textContent = subAlbum[2];
             subContainer.appendChild(p1);
@@ -69,7 +75,45 @@ function showPhotoAlbum(photoId) {
                 slide.className = 'swiper-slide';
 
                 const img = document.createElement('img');
-                img.src = '04_우리/사진첩/3/' + nameFile[i];
+                img.src = '04_우리/사진첩/03/' + nameFile[i];
+                img.alt = 'Wedding Photo' + i;
+
+                slide.appendChild(img);
+                slider.appendChild(slide);
+            }
+            break;
+        
+        case 'photo4':
+            p1.textContent = subAlbum[3];
+            subContainer.appendChild(p1);
+            p2.textContent = textAlbum[3];
+            textContainer.appendChild(p2);
+
+            for (var i = 0; i < numFile[3]; i++) {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+
+                const img = document.createElement('img');
+                img.src = '04_우리/사진첩/04/' + nameFile[i];
+                img.alt = 'Wedding Photo' + i;
+
+                slide.appendChild(img);
+                slider.appendChild(slide);
+            }
+            break;
+
+        case 'photo5':
+            p1.textContent = subAlbum[4];
+            subContainer.appendChild(p1);
+            p2.textContent = textAlbum[4];
+            textContainer.appendChild(p2);
+
+            for (var i = 0; i < numFile[4]; i++) {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+
+                const img = document.createElement('img');
+                img.src = '04_우리/사진첩/05/' + nameFile[i];
                 img.alt = 'Wedding Photo' + i;
 
                 slide.appendChild(img);
