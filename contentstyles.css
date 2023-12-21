@@ -134,19 +134,19 @@ h1 {
     position: relative;
 }
 
-.photo-album button {
+.photo-album-container button {
     /* padding: 1.4vw; */
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 2.5vh;
+    /* bottom: 2.5vh; */
     left: 33.35vw;
     border: none;
     background-color: #F5F5F5;
 
 }
 
-.photo-album button img {
+.photo-album-container button img {
     width: 23.3vw;
 }
 
