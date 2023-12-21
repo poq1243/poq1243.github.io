@@ -183,6 +183,7 @@ h1 {
     margin-right: 8.35vw;
     background-color: #ffffff;
     border-radius: 3vw;
+    box-shadow: 0 3pt 6pt #00000029;
 }
 
 #map {
@@ -198,12 +199,29 @@ h1 {
     border-radius: 3vw 3vw 0 0;
 }
 
-.cal-container{
+.cal-container {
     width: 86vw;
     margin: 0 7vw;
 }
 
-.cal-container img{
+.cal-container img {
     max-width: 100%;
 }
 
+.info {
+    width: 83.3vw;
+    height: auto;
+    margin: 0.58vw 8.35vw;
+    background-color: #ffffff;
+    border-radius: 3vw;
+}
+
+.info-title p{
+    font-size: 3.26vw;
+    color: #4E4E4E;
+}
+
+.info-content p {
+    font-size: 2.8vw;
+    color: #6F6F6F;
+}
