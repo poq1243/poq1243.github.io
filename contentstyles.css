@@ -208,20 +208,69 @@ h1 {
     max-width: 100%;
 }
 
+.map-info {
+    margin: 2.5vw 3.5vw;
+}
+
+.map-info1 p {
+    font-family: 'Noto Sans CJK KR,Regular', sans-serif;
+    font-weight: 350;
+    font-size: 4vw;
+    color: #222222;
+    letter-spacing: -0.14vw;
+    margin: 0;
+}
+
+.map-info2 p {
+    font-family: 'Noto Sans CJK KR,Regular', sans-serif;
+    font-size: 2.33vw;
+    color: #6F6F6F;
+    letter-spacing: -0.12vw;
+    margin: 0;
+    margin-top: 0.93vw;
+}
+
+.trans-info {
+    margin: 10vw 0 0 0;
+    padding: 0;
+}
+
 .info {
     width: 83.3vw;
     height: auto;
-    margin: 0.58vw 8.35vw;
+    margin: 1.16vw 8.35vw;
     background-color: #ffffff;
     border-radius: 3vw;
+    padding: 3vw 0 2vw 0;
 }
 
-.info-title p{
+.info-title p {
+    font-family: 'Noto Sans KR,Regular', sans-serif;
+    font-weight: 350;
     font-size: 3.26vw;
     color: #4E4E4E;
+    letter-spacing: -0.07vw;
+    margin: 0;
+    
 }
 
 .info-content p {
+    font-family: 'Noto Sans KR,Regular', sans-serif;
+    font-weight: 350;
     font-size: 2.8vw;
     color: #6F6F6F;
+    letter-spacing: -0.08vw;
+    margin: 0;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.map-button img {
+    height: 7vw;
+    width: auto;
+    margin: 0;
 }

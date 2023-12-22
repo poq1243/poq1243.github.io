@@ -19,7 +19,7 @@
             <p>서울특별시 강동구 천호대로 1077<br>
                 이스트센트럴타워 35층</p>
             <p>주소 복사하기</p>
-            
+
         </div>
 
         <div class="map-container">
@@ -31,18 +31,27 @@
             </div>
 
             <div class="map-info">
-                <div class="text-box2" >
-                    <p style="color: black;">
+                <div class="map-info1">
+                    <p>
                         루벨 강동점</p>
                 </div>
-                <div class="text-box1">
-                    <p style="color: black;">
+                <div class="map-info2">
+                    <p>
                         서울특별시 강동구 천호대로 1077 이스트센트럴타워 35~36층</p>
                 </div>
+                <div class="icon-container">
+                    <a href="https://place.map.kakao.com/1688944966" target="_blank" class="map-button">
+                        <img src="02_위치 및 시간/symbol_카카오맵.png" alt="카카오맵">
+                    </a>
+                    <a href="https://naver.me/5JJQMPOY" target="_blank" class="map-button">
+                        <img src="02_위치 및 시간/symbol_네이버 지도.png" alt="네이버 지도">
+                    </a>
+                </div>
             </div>
+            
         </div>
 
-        <div class="map-info">
+        <div class="trans-info">
             <div class="info">
                 <div class="info-title">
                     <p>지하철 이용시</p>
@@ -77,14 +86,23 @@
                         이스트센트럴타워 주차장 입구로 안내됩니다.
                     </p>
                 </div>
+                <div class="icon-container">
+                    <a href="https://surl.tmobiapi.com/fffe7cae" target="_blank" class="map-button">
+                        <img src="02_위치 및 시간/symbol_T맵.png" alt="T맵">  
+                    </a>
+                    <!-- 카카오내비 링크 api사용해서 추가 필요 -->
+                    <a href="https://place.map.kakao.com/1688944966" target="_blank" class="map-button">
+                        <img src="02_위치 및 시간/symbol_카카오내비.png" alt="카카오내비">
+                    </a>
+                </div>
             </div>
         </div>
-        
+
 
         <div class="title-container">
             <h1>일정 및 시간</h1>
             <p>2024.02.17 오후 3시 30분</p>
-        
+
         </div>
 
         <div class="cal-container">
@@ -119,6 +137,25 @@
             <!-- 더 많은 버튼이 필요하다면 위와 같이 추가 -->
         </nav>
     </footer>
+
+    <!-- <script>// 네이버 지도 생성
+        // var company = new naver.maps.LatLng(37.522158, 127.038865),
+        var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.5221839, 127.0390057),
+            zoom: 16,
+        });
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.5221839, 127.0390057),
+            map: map,
+        });
+
+        if (typeof jQuery == 'undefined') {
+            var script = document.createElement('script');
+            script.type = "text/javascript";
+            script.src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js";
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+    </script> -->
 </body>
 
 </html>
