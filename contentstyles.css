@@ -22,6 +22,18 @@ body {
     font-size: 3.256vw;
 }
 
+.title-container a {
+    font-style: 'Noto Sans KR, Regular';
+    font-size: 2.8vw;
+    color: #6F6F6F;
+    text-decoration: underline;
+    letter-spacing: -0.084vw;
+}
+
+.title-container img {
+    width: 3vw;
+}
+
 h1 {
     color: #222222;
     font-weight: 400;
@@ -210,6 +222,14 @@ h1 {
 
 .map-info {
     margin: 2.5vw 3.5vw;
+    display: flex;
+    justify-content:space-between;
+}
+
+.info-wrap {
+    margin: 0 3.5vw 0 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .map-info1 p {
@@ -240,7 +260,7 @@ h1 {
     height: auto;
     margin: 1.16vw 8.35vw;
     background-color: #ffffff;
-    border-radius: 3vw;
+    border-radius: 2vw;
     padding: 3vw 0 2vw 0;
 }
 
@@ -251,6 +271,8 @@ h1 {
     color: #4E4E4E;
     letter-spacing: -0.07vw;
     margin: 0;
+    margin-left: 5vw;
+    margin-bottom: 1.2vw;
     
 }
 
@@ -261,11 +283,13 @@ h1 {
     color: #6F6F6F;
     letter-spacing: -0.08vw;
     margin: 0;
+    margin-left: 9.77vw;
 }
 
 .icon-container {
+    width: 15vw;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 
 }
 

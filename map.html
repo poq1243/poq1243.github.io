@@ -21,9 +21,9 @@
     <main>
         <div class="title-container">
             <h1>위치</h1>
-            <p>서울특별시 강동구 천호대로 1077<br>
+            <p style="display: inline; box-shadow:inset 0 -2.6vw 0 #FAF0A5;">서울특별시 강동구 천호대로 1077<br>
                 이스트센트럴타워 35층</p>
-            <p>주소 복사하기</p>
+            <p><a onClick="clickHandler()">주소 복사하기<img src="02_위치 및 시간/Icon_복사.png"> </a></p>    
 
         </div>
 
@@ -36,14 +36,17 @@
             </div>
 
             <div class="map-info">
-                <div class="map-info1">
-                    <p>
-                        루벨 강동점</p>
+                <div class="map-info-wrap">
+                    <div class="map-info1">
+                        <p>
+                            루벨 강동점</p>
+                    </div>
+                    <div class="map-info2">
+                        <p>
+                            서울특별시 강동구 천호대로 1077 이스트센트럴타워 35~36층</p>
+                    </div>
                 </div>
-                <div class="map-info2">
-                    <p>
-                        서울특별시 강동구 천호대로 1077 이스트센트럴타워 35~36층</p>
-                </div>
+                
                 <div class="icon-container">
                     <a href="https://place.map.kakao.com/1688944966" target="_blank" class="map-button">
                         <img src="02_위치 및 시간/symbol_카카오맵.png" alt="카카오맵">
@@ -59,7 +62,7 @@
         <div class="trans-info">
             <div class="info">
                 <div class="info-title">
-                    <p>지하철 이용시</p>
+                    <p>🚊 &nbsp;지하철 이용시</p>
                 </div>
                 <div class="info-content">
                     <p>5호선 강동역 1번 출구 연결</p>
@@ -68,7 +71,7 @@
 
             <div class="info">
                 <div class="info-title">
-                    <p>버스 이용시</p>
+                    <p>🚍 &nbsp;버스 이용시</p>
                 </div>
                 <div class="info-content">
                     <p>
@@ -82,31 +85,35 @@
             </div>
 
             <div class="info">
-                <div class="info-title">
-                    <p>자가용 이용시</p>
-                </div>
-                <div class="info-content">
-                    <p>
-                        '천호동 448-6'으로 검색 시<br>
-                        이스트센트럴타워 주차장 입구로 안내됩니다.
-                    </p>
-                </div>
-                <div class="icon-container">
-                    <a href="https://surl.tmobiapi.com/fffe7cae" target="_blank" class="map-button">
-                        <img src="02_위치 및 시간/symbol_T맵.png" alt="T맵">  
-                    </a>
-                    <!-- 카카오내비 링크 api사용해서 추가 필요 -->
-                    <a href="https://place.map.kakao.com/1688944966" target="_blank" class="map-button">
-                        <img src="02_위치 및 시간/symbol_카카오내비.png" alt="카카오내비">
-                    </a>
-                </div>
+                <div class="info-wrap">
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <p>🚘 &nbsp;자가용 이용시</p>
+                        </div>
+                        <div class="info-content">
+                            <p>
+                                '천호동 448-6'으로 검색 시<br>
+                                이스트센트럴타워 주차장 입구로 안내됩니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <a href="https://surl.tmobiapi.com/fffe7cae" target="_blank" class="map-button">
+                            <img src="02_위치 및 시간/symbol_T맵.png" alt="T맵">
+                        </a>
+                        <!-- 카카오내비 링크 api사용해서 추가 필요 -->
+                        <a href="https://place.map.kakao.com/1688944966" target="_blank" class="map-button">
+                            <img src="02_위치 및 시간/symbol_카카오내비.png" alt="카카오내비">
+                        </a>
+                    </div>
+                </div> 
             </div>
         </div>
 
 
         <div class="title-container">
             <h1>일정 및 시간</h1>
-            <p>2024.02.17 오후 3시 30분</p>
+            <p style="display: inline; box-shadow:inset 0 -2.6vw 0 #FAF0A5;">2024.02.17 오후 3시 30분</p>
 
         </div>
 
@@ -161,6 +168,19 @@
             document.getElementsByTagName('head')[0].appendChild(script);
         }
     </script> -->
+
+    <script>
+        function clickHandler() {
+                const el = document.createElement(`textarea`)
+                el.value = "서울특별시 강동구 천호대로 1077 이스트센트럴타워 35층"
+                el.setAttribute(`readonly`, ``)
+                document.body.appendChild(el)
+                el.select()
+                document.execCommand(`copy`)
+                document.body.removeChild(el)
+                alert('주소가 복사되었습니다. 필요하신 곳에 붙여넣기 하세요!')
+            }
+    </script>
 </body>
 
 </html>
