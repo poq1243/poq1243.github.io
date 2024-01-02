@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="contentstyles.css">
 
     <meta name="theme-color" content="#white" />
-    
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#white" />
 </head>
 
 <body>
+
+    <script src="contact.js"></script>
     <main>
         <div class="title-container">
             <h1>방명록</h1>
@@ -25,6 +27,112 @@
         <div class="title-container">
             <h1>마음 전할 곳</h1>
         </div>
+
+        <div class="give-mind-container">
+            <img src="03_마음 전할 곳/마음전할사진.png">
+            <div class="mind-text-container">
+                <img src="03_마음 전할 곳/신랑신부.png" style="height: 4.42vw;">
+                <div class="contact-button" onclick="showContact()">
+                    <img src="03_마음 전할 곳/연락하기.png" style="height: 7.44vw;">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="account-info">
+            <div class="account-box">
+                <div class="info-title">
+                    <p>신랑측 계좌</p>
+                </div>
+                <button type="button" class="collapsible" onclick="collapse(this);">
+                <img src="03_마음 전할 곳/체크_down.png"></button>
+                <div class="account-contant">
+                    <p>우리 1002-240-242252 (예금주: 이재준)</p>
+                    <p>기업 545-004536-01-014 (예금주: 이유갑)</p>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="StD" style="text-align: center; margin: 0">
+            <p style="font-family: 'Bodoni 72'; font-style: italic; font-size: 8.14vw;">
+                Thank you!
+            </p>
+        </div>
+
+
+        <!-- Contact Overlay (initially hidden) -->
+        <div class="contact-overlay" id="ContactOverlay" style="display: none;">
+            <div class="contact-container">
+                <div style="text-align: center; font-size: 5.6vw; margin: 6.28vw;"> 📞 </div>
+                <hr color="#F2F2F2" ;>
+                <div class="contact-content">
+                    <div class="identity-man">신랑</div>
+                    <div class="name">이재준</div>
+                    <div class="icon-container" style="width: 17vw;">
+                        <a href="tel:010-2805-4208" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_통화.png" alt="전화_이재준">
+                        </a>
+                        <a href="sms:010-2805-4208" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_메시지.png" alt="메시지_이재준">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="identity-man">신랑 아버지</div>
+                    <div class="name">이유갑</div>
+                    <div class="icon-container" style="width: 17vw;">
+                        <a href="tel:010-2805-4208" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_통화.png" alt="전화_이유갑">
+                        </a>
+                        <a href="sms:010-2805-4208" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_메시지.png" alt="메시지_이유갑">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="identity-man">신랑 어머니</div>
+                    <div class="name">홍종선</div>
+                    <div class="icon-container" style="width: 17vw;">
+                        <a href="tel:010-2805-4208" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_통화.png" alt="전화_홍종선">
+                        </a>
+                        <a href="sms:010-2805-4208" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_메시지.png" alt="메시지_홍종선">
+                        </a>
+                    </div>
+                </div>
+                <hr color="#F2F2F2" ;>
+                <div class="contact-content">
+                    <div class="identity-woman">신부</div>
+                    <div class="name">유혜진</div>
+                    <div class="icon-container" style="width: 17vw;">
+                        <a href="tel:010-3397-8934" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_통화.png" alt="전화_유혜진">
+                        </a>
+                        <a href="sms:010-3397-8934" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_메시지.png" alt="메시지_유혜진">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-content">
+                    <div class="identity-woman">신부 어머니</div>
+                    <div class="name">서해경</div>
+                    <div class="icon-container" style="width: 17vw;">
+                        <a href="tel:010-3397-8934" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_통화.png" alt="전화_서해경">
+                        </a>
+                        <a href="sms:010-3397-8934" target="_blank" class="map-button">
+                            <img src="03_마음 전할 곳/Icon_메시지.png" alt="메시지_서해경">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Close button -->
+                <button onclick="closeContact()">
+                    <img src="04_우리/아이콘/버튼_닫기.png" alt="닫기"></button>
+            </div>
+
+        </div>
+
 
     </main>
     <footer>
