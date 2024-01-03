@@ -273,7 +273,6 @@ h1 {
     margin: 0;
     margin-left: 5vw;
     margin-bottom: 1.2vw;
-
 }
 
 .info-content p {
@@ -405,15 +404,56 @@ hr {
 }
 
 .account-box {
-    display: flex;
-    justify-content: space-around;
-}
-
-.account-box {
     width: 83.3vw;
     height: auto;
-    margin: 1.16vw 8.35vw;
+    margin: 2vw 8.35vw;
     background-color: #ffffff;
     border-radius: 2vw;
-    padding: 3vw 0 2vw 0;
+    padding: 4.5vw 0 3.5vw 0;
+    box-shadow: 0 3pt 6pt #00000029;
+}
+
+.collapsible {
+    color: #4E4E4E;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: 'Noto Sans KR,Regular', sans-serif;
+    font-weight: 350;
+    font-size: 3.26vw;
+    letter-spacing: -0.07vw;
+    margin: 0 5.8vw 0 10.7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible p{
+    margin: 0;
+}
+
+.account-contant {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-family: 'Noto Sans KR,Regular', sans-serif;
+    font-weight: 350;
+    font-size: 3.26vw;
+    letter-spacing: -0.07vw;
+    margin-left: 11.16vw;
+}
+
+.account-contant p{
+    margin: 0;
+}
+
+.collapsible:after {
+    content: '\25BD';
+    color: #4E4E4E;
+    font-weight: bold;
+}
+
+.active:after {
+    content: "\25B3";
 }
