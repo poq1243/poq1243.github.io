@@ -21,3 +21,51 @@ function collapse(element) {
         content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
     }
 }
+
+// 팝업 토글 함수
+function toggleGuestbook() {
+    const guestbook = document.getElementById('guestbookPopup');
+    guestbook.style.display = guestbook.style.display === 'none' ? 'flex' : 'none';
+}
+
+// 방명록 양식 제출 이벤트 핸들러
+document.getElementById('guestbookForm').onsubmit = function (event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+
+    // Fetch API를 사용하여 서버에 데이터 전송
+    fetch('/submit-guestbook', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, message }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            toggleGuestbook();
+            loadGuestbookEntries(); // 방명록 엔트리를 다시 불러옵니다.
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+};
+
+function loadGuestbookEntries() {
+    fetch('/get-guestbook-entries')
+        .then(response => response.json())
+        .then(entries => {
+            const entriesContainer = document.getElementById('entriesContainer');
+            entriesContainer.innerHTML = ''; // 컨테이너 초기화
+            entries.forEach(entry => {
+                const div = document.createElement('div');
+                div.innerHTML = `<strong>${entry.name}</strong>: ${entry.message}`;
+                entriesContainer.appendChild(div);
+            });
+        });
+}
+
+// 페이지 로드 시 방명록 엔트리를 불러옵니다.
+window.addEventListener('load', loadGuestbookEntries);

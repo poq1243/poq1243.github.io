@@ -24,6 +24,27 @@
             <h1>방명록</h1>
         </div>
 
+        <!-- 방명록 버튼 -->
+        <!-- <button id="guestbookButton" onclick="toggleGuestbook()">방명록 작성</button> -->
+        
+        <!-- 방명록 팝업 (초기에는 숨겨져 있음) -->
+        <div id="guestbookPopup" class="guestbook-popup" style="display: none;">
+            <div class="guestbook-content">
+                <span class="close" onclick="toggleGuestbook()">&times;</span>
+                <h2>방명록</h2>
+                <form id="guestbookForm">
+                    <label for="name">이름:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="message">메시지:</label>
+                    <textarea id="message" name="message" required></textarea>
+        
+                    <input type="submit" value="제출">
+                </form>
+            </div>
+        </div>
+
+
         <div class="title-container">
             <h1>마음 전할 곳</h1>
         </div>
@@ -41,7 +62,7 @@
         <div class="account-info">
             <div class="account-box">
                 <div type="button" class="collapsible" onclick="collapse(this);">
-                    <p>신랑측 계좌</p> </div>
+                    <p>신랑측 계좌🤵🏻‍♂️</p> </div>
                 <div class="account-contant">
                     <p>우리 1002-240-242252 &nbsp;&nbsp;&nbsp;&nbsp;(예금주: 이재준)</p>
                     <p>기업 545-004536-01-014 (예금주: 이유갑)</p>
@@ -50,7 +71,7 @@
 
             <div class="account-box">
                 <div type="button" class="collapsible" onclick="collapse(this);">
-                    <p>신부측 계좌</p>
+                    <p>신부측 계좌👰🏻‍♀️</p>
                 </div>
                 <div class="account-contant">
                     <p>우리 1002-252-588460 &nbsp;&nbsp;&nbsp;&nbsp;(예금주: 유혜진)</p>

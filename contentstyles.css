@@ -433,6 +433,10 @@ hr {
     margin: 0;
 }
 
+.account-info{
+    margin-top: 14vw;
+}
+
 .account-contant {
     max-height: 0;
     overflow: hidden;
@@ -445,7 +449,10 @@ hr {
 }
 
 .account-contant p{
-    margin: 0;
+    margin-top: 5vw;
+    text-decoration-line: none;
+    text-decoration-color: #4E4E4E;
+
 }
 
 .collapsible:after {
@@ -456,4 +463,13 @@ hr {
 
 .active:after {
     content: "\25B3";
+}
+
+.Story-board {
+    margin-top: 5vw;
+}
+
+.Story-board img{
+    width: 100vw;
+    height: auto;
 }
