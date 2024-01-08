@@ -466,10 +466,12 @@ hr {
 }
 
 .Story-board {
-    margin-top: 5vw;
+    margin-top: 10vw;
 }
 
 .Story-board img{
+
     width: 100vw;
     height: auto;
+    border-radius: 10vw 10vw 0 0;
 }
