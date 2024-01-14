@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=”format-detection” content=”telephone=no, address=no, email=no” >
+    <meta name=”format-detection” content=”telephone=no” >
     <title>모바일 청첩장</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contentstyles.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+    
 
     <meta name="theme-color" content="#white" >
 
@@ -21,31 +24,7 @@
 
     <script src="contact.js"></script>
     <main>
-        <div class="title-container">
-            <h1>방명록</h1>
-        </div>
-
-        <!-- 방명록 버튼 -->
-        <!-- <button id="guestbookButton" onclick="toggleGuestbook()">방명록 작성</button> -->
         
-        <!-- 방명록 팝업 (초기에는 숨겨져 있음) -->
-        <div id="guestbookPopup" class="guestbook-popup" style="display: none;">
-            <div class="guestbook-content">
-                <span class="close" onclick="toggleGuestbook()">&times;</span>
-                <h2>방명록</h2>
-                <form id="guestbookForm">
-                    <label for="name">이름:</label>
-                    <input type="text" id="name" name="name" required>
-        
-                    <label for="message">메시지:</label>
-                    <textarea id="message" name="message" required></textarea>
-        
-                    <input type="submit" value="제출">
-                </form>
-            </div>
-        </div>
-
-
         <div class="title-container">
             <h1>마음 전할 곳</h1>
         </div>
@@ -76,17 +55,85 @@
                 </div>
                 <div class="account-contant">
                     <p>우리 1002-252-588460 &nbsp;&nbsp;&nbsp;&nbsp;(예금주: 유혜진)</p>
-                    <p>기업 010-2064-8934 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(예금주: 서해경)</p>
+                    <p>기업 042-028123-02-018 (예금주: 서해경)</p>
                 </div>
             </div>
         </div>
 
+        <div class="HCB_container">
+            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+        </div>
+        
+        
+        <!-- customize labels of htmlcommentbox.com -->
+        <script>
+            /* This code goes ABOVE the main HTML Comment Box code!
+             replace the text in the single quotes below to customize labels.*/
+            hcb_user = {
+                /* L10N */
+                comments_header: '방명록',
+                name_label: '이름을 입력해주세요',
+                content_label: '내용을 입력해주세요.',
+                submit: '등록',
+                logout_link: '<img title="log out" src="https://www.htmlcommentbox.com/static/images/door_out.svg" alt="[logout]" class="hcb-icon hcb-door-out"/>',
+                admin_link: '<img src="https://www.htmlcommentbox.com/static/images/door_in.svg" alt="[login]" class="hcb-icon hcb-door-in"/>',
+                no_comments_msg: 'No one has commented yet. Be the first!',
+                add: 'Add your comment',
+                again: 'Post another comment',
+                rss: '<img src="https://www.htmlcommentbox.com/static/images/feed.svg" class="hcb-icon" alt="rss"/> ',
+                said: 'said:',
+                prev_page: '<img src="https://www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+                next_page: '<img src="https://www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+                showing: 'Showing',
+                to: 'to',
+                website_label: 'website (optional)',
+                email_label: 'email',
+                anonymous: 'Anonymous',
+                mod_label: '(mod)',
+                subscribe: 'Email Me Replies',
+                add_image: 'Add Image',
+                are_you_sure: 'Do you want to flag this comment as inappropriate?',
+
+                reply: 'Reply',
+                flag: 'Flag',
+                like: 'Like',
+
+                /* dates */
+                days_ago: 'days ago',
+                hours_ago: 'hours ago',
+                minutes_ago: 'minutes ago',
+                within_the_last_minute: 'within the last minute',
+
+                msg_thankyou: 'Thank you for commenting!',
+                msg_approval: 'NOTE: This comment is not published until approved',
+                msg_approval_required: 'Thank you for commenting! Your comment will appear once approved by a moderator.',
+
+                err_bad_html: 'Your comment contained bad html.',
+                err_bad_email: 'Please enter a valid email address.',
+                err_too_frequent: 'You must wait a few seconds between posting comments.',
+                err_comment_empty: 'Your comment was not posted because it was empty!',
+                err_denied: 'Your comment was not accepted.',
+                err_unknown: 'Your comment was blocked for unknown reasons, please report this.',
+                err_spam: 'Your comment was detected as spam.',
+                err_blocked: 'Your comment was blocked by site policy.',
+
+                /* SETTINGS */
+                MAX_CHARS: 8192,
+                PAGE: '', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+                ON_COMMENT: function () { }, /* Function to call after commenting. */
+                RELATIVE_DATES: true /* show dates in the form "X hours ago." etc. */
+            };
+        </script>
+        <!-- done customizing labels of htmlcommentbox.com -->
+        <script type="text/javascript"
+            id="hcb">  if (!window.hcb_user) { hcb_user = {}; } (function () { var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript"); s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24G0LZ8KtzlUebUNu4fg%2Fks1" + "&opts=16798&num=10&ts=1705048693798"); if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s); })();  </script>
+<!-- 
         <div class="StD" style="text-align: center; margin: 0">
             <p style="font-family: 'Bodoni 72'; font-style: italic; font-size: 8.14vw;">
                 Thank you!
             </p>
-        </div>
-
+        </div> -->
+        <link rel="stylesheet" href="CommentStyle.css">
 
         <!-- Contact Overlay (initially hidden) -->
         <div class="contact-overlay" id="ContactOverlay" style="display: none;">
@@ -181,6 +228,8 @@
             <!-- 더 많은 버튼이 필요하다면 위와 같이 추가 -->
         </nav>
     </footer>
+
+
 </body>
 
 </html>

@@ -1,0 +1,41 @@
+h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    color: #222222;
+    font-weight: 400;
+    font-size: 6vw;
+    margin: 0;
+    padding: 0.43vh 0;
+}
+
+#HCB_comment_form_box {
+    margin-top: 5.35vw;
+}
+
+#hcb_msg {
+    display: none;
+}
+
+.hcb-icon {
+    display: none;
+}
+
+.home-desc {
+
+    display: none;
+}
+
+#HCB_comment_box #hcb_form .btn,
+#HCB_comment_box #HCB_comment_form_box .btn {
+    background-color: #F78383;
+    border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 84vw;
+}
+
+.HCB_container {
+    margin-top: 5.8vh;
+    width: 84vw;
+    height: auto;
+    margin-left: 8vw;
+}
