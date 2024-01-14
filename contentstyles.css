@@ -139,7 +139,8 @@ h1 {
     background-color: #ffffff;
     border-radius: 5vw 5vw 0 0;
     width: 90vw;
-    height: 88vh;
+    /* height: 88vh; */
+    height: auto;
     margin-left: 5vw;
     margin-top: 5vh;
     padding: 0;
@@ -148,11 +149,12 @@ h1 {
 
 .photo-album-container button {
     /* padding: 1.4vw; */
-    margin: 0;
+    margin-left: 33.35vw;;
+    margin-bottom: 5vw;
     padding: 0;
-    position: absolute;
+    /* position: absolute; */
     /* bottom: 2.5vh; */
-    left: 33.35vw;
+    
     border: none;
     background-color: #ffffff;
 
