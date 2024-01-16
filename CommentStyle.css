@@ -31,6 +31,7 @@ h3 {
     border: none;
     font-family: 'Noto Sans KR', sans-serif;
     width: 84vw;
+    font-size: 3.15vw;
 }
 
 .HCB_container {
@@ -38,4 +39,15 @@ h3 {
     width: 84vw;
     height: auto;
     margin-left: 8vw;
+}
+
+#HCB_comment_box #hcb_form textarea,
+#HCB_comment_box #hcb_form #hcb_form_name {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 3vw;
+}
+
+#HCB_comment_box .hcb-comment-tb button {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.8vw;
 }
