@@ -1,6 +1,6 @@
 function showPhotoAlbum(photoId) {
     // 각 폴더 파일 개수
-    const numFile = [8, 9, 8, 5, 6, 7, 8];
+    const numFile = [8, 9, 8, 5, 6, 7, 8, 7];
     const nameFile = [
         '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg',
         '06.jpg', '07.jpg', '08.jpg', '09.jpg', '10.jpg'
@@ -12,7 +12,8 @@ function showPhotoAlbum(photoId) {
         '푸릇푸릇 녹차밭에서, 덥지만 즐거운 초여름',
         '방방곡곡! 이번에는 부산 데이트',
         '둘이서 떠난 첫 해외여행! 다낭에서 건지는 인생샷',
-        '머나먼 땅 아프리카로, 우간다에서 전하는 사랑'
+        '머나먼 땅 아프리카로, 우간다에서 전하는 사랑',
+        '휴가는 처음이라... 떠나요~ 제주도~'
 
     ];
     const textAlbum = [
@@ -22,7 +23,8 @@ function showPhotoAlbum(photoId) {
         '여름 철새를 보기 위해 보성 녹차밭으로 달려갔어요. 너무 더워서 제대로 보진 못했지만 행복했던 하루였어요☀️',
         '오빠네 동생 부부를 볼 겸 데이트 할 겸~ 여기저기 돌아다니며 추억을 쌓았어요🩵',
         '다낭으로 함께 떠나는 첫 해외여행을 다녀왔어요. 너무 좋은 날씨와 좋은 배경 덕분에 인생샷들을 건졌죠📸',
-        '우간다로 해외 단기선교를 다녀왔어요. 경이로운 자연도 보고, 하나님의 사랑도 전하고 왔답니다🩵'
+        '우간다로 해외 단기선교를 다녀왔어요. 경이로운 자연도 보고, 하나님의 사랑도 전하고 왔답니다🩵',
+        '재준이 입사 후 처음 휴가를 써서 제주도를 다녀왔어요. 신나게 먹고 새도 보고 즐거운 시간을 즐겼답니다🎵'
     ];
 
     const slider = document.getElementById('swiperWrapper');
@@ -156,6 +158,25 @@ function showPhotoAlbum(photoId) {
 
                 const img = document.createElement('img');
                 img.src = '04_우리/사진첩/07/' + nameFile[i];
+                img.alt = 'Wedding Photo' + i;
+
+                slide.appendChild(img);
+                slider.appendChild(slide);
+            }
+            break;
+        
+        case 'photo8':
+            p1.textContent = subAlbum[7];
+            subContainer.appendChild(p1);
+            p2.textContent = textAlbum[7];
+            textContainer.appendChild(p2);
+
+            for (var i = 0; i < numFile[6]; i++) {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+
+                const img = document.createElement('img');
+                img.src = '04_우리/사진첩/08/' + nameFile[i];
                 img.alt = 'Wedding Photo' + i;
 
                 slide.appendChild(img);
