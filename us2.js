@@ -171,7 +171,7 @@ function showPhotoAlbum(photoId) {
             p2.textContent = textAlbum[7];
             textContainer.appendChild(p2);
 
-            for (var i = 0; i < numFile[6]; i++) {
+            for (var i = 0; i < numFile[7]; i++) {
                 const slide = document.createElement('div');
                 slide.className = 'swiper-slide';
 
