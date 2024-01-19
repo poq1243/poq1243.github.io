@@ -381,6 +381,7 @@ h1 {
     color: #488ED5;
     font-family: 'Noto Sans KR, Regular';
     text-align: center;
+    letter-spacing: -0.2vw;
 }
 
 .identity-woman {
@@ -389,6 +390,7 @@ h1 {
     color: #F78383;
     font-family: 'Noto Sans KR, Regular';
     text-align: center;
+    letter-spacing: -0.2vw;
 }
 
 .name {

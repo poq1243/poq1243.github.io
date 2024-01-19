@@ -141,3 +141,10 @@ header {
     height: 7.8vh;
     /* 이미지 높이를 비율에 맞게 자동 조정 */
 }
+
+
+#notice {
+    width: 100%;
+    height: auto;
+    margin-top: -30px;
+}
