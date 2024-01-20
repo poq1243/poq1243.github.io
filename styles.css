@@ -103,9 +103,9 @@ header {
 }
 
 .nav-button img {
-    width: auto;
+    width: 23vw;
     /* 이미지 크기 조정 */
-    height: 7.8vh;
+    height: auto;
     /* 이미지 높이를 비율에 맞게 자동 조정 */
 }
 
