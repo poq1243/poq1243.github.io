@@ -87,7 +87,7 @@ header {
     /* 화면 하단에 위치시킵니다. */
     left: 0;
     /* 좌측 경계부터 시작합니다. */
-    height: 7.8vh;
+    height: auto;
 
 }
 
