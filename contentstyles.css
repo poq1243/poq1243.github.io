@@ -49,23 +49,26 @@ h1 {
 .button-us img {
     padding: 1.4vw;
     width: 23.3vw;
+    filter: drop-shadow(0px 1.5px 1.5px rgba(0, 0, 0, 0.3))
+    
 }
 
 
 .photo-table {
     display: flex;
-    width: 83.3vw;
-    margin: 0 8.35vw;
+    width: 88.37vw;
+    margin: 0 5.815vw;
     height: auto;
     /* 높이를 auto로 설정하여 콘텐츠에 맞게 조정 */
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+    margin-bottom: 30px;
 }
 
 .photo-card {
-    width: 38.5vw;
-    height: 51.3vw;
+    width: 100%;
+    height: 70vw;
     position: relative;
     margin-top: 2.7vh;
 }
@@ -74,29 +77,37 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10%;
+    border-radius: 20px;
+    box-shadow: 0 5pt 5pt rgba(0, 0, 0, 0.2);
 }
 
 .text-box {
     position: absolute;
-    bottom: 4vw;
-    left: 3vw;
+    bottom: 0vw;
+    /* left: 3vw; */
+    width: 100%;
+    background-color: #F5F5F5;
+    border-radius: 0 0 20px 20px;
 }
 
 .text-box1 p {
-    font-size: 1.3vh;
+    font-size: 3.25vw;
     margin: 0;
+    margin-left: 3vw;
+    margin-top: 3vw;
     padding: 0;
-    color: white;
+    /* color: white; */
 }
 
 .text-box2 p {
-    font-size: 1.7vh;
+    font-size: 4.19vw;
     letter-spacing: -0.1vh;
     margin: 0;
     padding: 0;
+    margin-left: 3vw;
     font-weight: 500;
-    color: white;
+    margin-bottom: 3vw;
+    /* color: white; */
 }
 
 
@@ -120,19 +131,34 @@ h1 {
     /* Center vertically */
 }
 
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 85%;
+}
 
 .swiper-slide img {
-    width: 70vw;
+    width: 100vw;
     /* 이미지가 부모 요소의 100% 너비를 넘지 않도록 합니다. */
     height: auto;
     /* 너비에 따라 높이가 자동으로 조정되도록 합니다. */
-    margin: 0.75vw 10vw;
+    /* margin: 0.75vw 10vw; */
     /* 상하 여백을 화면 너비의 백분율로 설정합니다. */
     display: block;
     /* 이미지가 블록 레벨 요소처럼 행동하게 합니다. */
     object-fit: cover;
     /* 이미지가 컨테이너를 가득 채우도록 합니다. */
 }
+
+/* .swiper-slide:nth-child(2n) {
+    width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 40%;
+} */
 
 .photo-album-container {
     border: solid;
@@ -149,12 +175,13 @@ h1 {
 
 .photo-album-container button {
     /* padding: 1.4vw; */
-    margin-left: 33.35vw;;
+    margin-left: 33.35vw;
+    ;
     margin-bottom: 5vw;
     padding: 0;
     /* position: absolute; */
     /* bottom: 2.5vh; */
-    
+
     border: none;
     background-color: #ffffff;
 
@@ -360,11 +387,17 @@ h1 {
     background-color: #ffffff;
     margin: 6.28vw;
     margin-left: 33.35vw;
+    
 
+}
+
+.contact-button img{
+    filter: drop-shadow(0px 1.5px 1.5px rgba(0, 0, 0, 0.3))
 }
 
 .contact-container button img {
     width: 23.3vw;
+    
 }
 
 .contact-content {
@@ -433,11 +466,11 @@ hr {
     align-items: center;
 }
 
-.collapsible p{
+.collapsible p {
     margin: 0;
 }
 
-.account-info{
+.account-info {
     margin-top: 14vw;
 }
 
@@ -452,7 +485,7 @@ hr {
     margin-left: 11.16vw;
 }
 
-.account-contant p{
+.account-contant p {
     margin-top: 5vw;
     text-decoration-line: none;
     text-decoration-color: #4E4E4E;
@@ -473,9 +506,9 @@ hr {
     margin-top: 10vw;
 }
 
-.Story-board img{
+.Story-board img {
 
     width: 100vw;
     height: auto;
-    border-radius: 10vw 10vw 0 0;
+    /* border-radius: 10vw 10vw 0 0; */
 }
