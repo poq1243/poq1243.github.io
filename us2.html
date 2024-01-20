@@ -149,6 +149,7 @@
                         <div class="swiper-wrapper" id="swiperWrapper">
                             <!-- Slides -->
                         </div>
+                        <div class="swiper-pagination"></div>
                         <!-- <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div> -->
                     </div>
@@ -191,6 +192,9 @@
             slidesPerView: "auto",
             spaceBetween: 1,
             centeredSlides: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
             //autoHeight: true,
             // navigation: {
             //    nextEl: ".swiper-button-next",
